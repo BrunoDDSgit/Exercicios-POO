@@ -34,6 +34,5 @@ public class Pentagono extends FormaGeometrica {
     public String toString() {
         return "Pentagono{" + "lado=" + lado + ", apotema=" + apotema + '}';
     }
-            
     
 }

@@ -11,4 +11,11 @@ package com.bruno.poo.exercicios.formas2;
 public abstract class FormaGeometrica {
     public abstract double getArea();
     public abstract double getPerimetro();
+  
+    public String getArea(String unidade) {
+        return "A area da forma eh de :"+this.getArea()+" "+unidade;
+    }
+    public String getPerimetro(String unidade) {
+        return "O perimetro da forma eh de: "+this.getPerimetro()+" "+unidade;
+    }
 }

@@ -45,7 +45,7 @@ public class Triangulo extends FormaGeometrica {
 
     @Override
     public String toString() {
-        return "Triangulo{" + "ladoA=" + ladoA + ", ladoB=" + ladoB + ", ladoC=" + ladoC + '}';
+        return "Triangulo{" + "lado A = " + ladoA + ", lado B = " + ladoB + ", lado C = " + ladoC + '}';
     }
 
     

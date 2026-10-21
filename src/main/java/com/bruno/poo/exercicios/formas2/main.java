@@ -27,7 +27,7 @@ public class main {
     }
     
     public static void imprimirFiguras(ArrayList<FormaGeometrica> figuras) {
-        System.out.println("----- IMPRIMINDO FIGURAS ------");
+        System.out.println("\n----- IMPRIMINDO FIGURAS ------");
         for (FormaGeometrica f : figuras) {
             System.out.println("---------- Figura numero: "+figuras.indexOf(f)+ " ----------");
             System.out.println(f);
@@ -47,14 +47,37 @@ public class main {
                 Pentagono p = (Pentagono) f;
                 System.out.println("Quantidade de lados do pentagono: "+p.getNumeroLados());
             } else System.out.println("Figuta nao catalogada.");
-            
-            System.out.println("----------------");
+            System.out.println("");
         }
-        System.out.println("----- FIM DA IMPRESSAO ------\n");
+        System.out.println("----- FIM DA IMPRESSAO ------");
+        
+        System.out.println("\n---- IMPRIMINDO FIGURAS COM O METODOS SOBRECARREGADOS ----");
+        for (FormaGeometrica f : figuras) {
+            System.out.println("---------- Figura numero: "+figuras.indexOf(f)+ " ----------");
+                System.out.println(f);
+                System.out.println(f.getArea("Metros Quadrados"));
+                System.out.println(f.getPerimetro("Metros"));
+
+                if (f instanceof Triangulo) {
+                    Triangulo t = (Triangulo) f;
+                    System.out.println("Tipo: "+t.getTipoTriangulo());
+                } else if(f instanceof Retangulo) {
+                    Retangulo r = (Retangulo) f;
+                    r.isQuadrado();
+                } else if(f instanceof Circunferencia) {
+                    Circunferencia c = (Circunferencia) f;
+                    System.out.println("Diametro:" +c.getDiametro());
+                } else if (f instanceof Pentagono) {
+                    Pentagono p = (Pentagono) f;
+                    System.out.println("Quantidade de lados do pentagono: "+p.getNumeroLados());
+                } else System.out.println("Figuta nao catalogada.");
+                System.out.println("");
+        }
+        System.out.println("----- FIM DA IMPRESSAO ------");
     }
     
     public static void mostrarDiametros(ArrayList<FormaGeometrica> figuras) {
-        System.out.println("---- FUNCAO MOSTRAR DIAMETRO ----");
+        System.out.println("\n---- FUNCAO MOSTRAR DIAMETRO ----");
         for (FormaGeometrica f : figuras) {
             figuras.indexOf(f);
             if (f instanceof Circunferencia) {
