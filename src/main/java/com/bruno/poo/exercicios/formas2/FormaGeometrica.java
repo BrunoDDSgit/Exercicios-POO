@@ -12,10 +12,13 @@ public abstract class FormaGeometrica {
     public abstract double getArea();
     public abstract double getPerimetro();
   
-    public String getArea(String unidade) {
-        return "A area da forma eh de :"+this.getArea()+" "+unidade;
+    public double getArea(String unidade) {
+        System.out.println("A area da forma eh de :"+this.getArea()+" "+unidade);    
+        return this.getArea();
     }
-    public String getPerimetro(String unidade) {
-        return "O perimetro da forma eh de: "+this.getPerimetro()+" "+unidade;
+    
+    public double getPerimetro(String unidade) {
+        System.out.println("O perimetro da forma eh de: "+this.getPerimetro()+" "+unidade); 
+        return this.getArea();
     }
 }
